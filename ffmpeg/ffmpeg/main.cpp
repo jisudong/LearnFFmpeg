@@ -23,6 +23,8 @@ int main(int argc, const char * argv[]) {
     
     simplest_yuv420_border("lena_256x256_yuv420p.yuv", 256, 256, 20, 1);
     
+    simplest_yuv420_graybar(640, 360, 0, 255, 10, "graybar_640x360.yuv");
+    
     return 0;
 }
 

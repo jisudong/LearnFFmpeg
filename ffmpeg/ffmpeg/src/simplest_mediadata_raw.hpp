@@ -61,5 +61,17 @@ int simplest_yuv420_halfy(const char *url, int w, int h, int num);
  */
 int simplest_yuv420_border(const char *url, int w, int h, int border, int num);
 
+/**
+ 生成YUV420P格式的灰阶测试图
+
+ @param width 输出YUV的宽
+ @param height 输出YUV的高
+ @param ymin Y的最大值
+ @param ymax Y的最小值
+ @param barnum 灰阶的数量
+ @param url_out 输出文件地址
+ */
+int simplest_yuv420_graybar(int width, int height, int ymin, int ymax, int barnum, const char *url_out);
+
 
 #endif /* simplest_mediadata_raw_h */
