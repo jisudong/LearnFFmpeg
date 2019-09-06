@@ -73,5 +73,16 @@ int simplest_yuv420_border(const char *url, int w, int h, int border, int num);
  */
 int simplest_yuv420_graybar(int width, int height, int ymin, int ymax, int barnum, const char *url_out);
 
+/**
+ 计算两个YUV420P像素数据的PSNR
+
+ @param url1 第一个输入YUV路径
+ @param url2 第二个输入YUV路径
+ @param w 输入YUV宽
+ @param h 输入YUV高
+ @param num 要处理的帧数
+ */
+int simplest_yuv420_psnr(const char *url1, const char *url2, int w, int h, int num);
+
 
 #endif /* simplest_mediadata_raw_h */

@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <math.h>
 
 /**
  Split Y, U, V planes in YUV420P file.
@@ -240,5 +241,43 @@ int simplest_yuv420_graybar(int width, int height, int ymin, int ymax, int barnu
     free(data_y);
     free(data_u);
     free(data_v);
+    return 0;
+}
+
+
+/**
+ 计算两个YUV420P像素数据的PSNR
+ 
+ @param url1 第一个输入YUV路径
+ @param url2 第二个输入YUV路径
+ @param w 输入YUV宽
+ @param h 输入YUV高
+ @param num 要处理的帧数
+ */
+int simplest_yuv420_psnr(const char *url1, const char *url2, int w, int h, int num) {
+    FILE *fp1 = fopen(url1, "rb+");
+    FILE *fp2 = fopen(url2, "rb+");
+    unsigned char *pic1 = (unsigned char *)malloc(w * h);
+    unsigned char *pic2 = (unsigned char *)malloc(w * h);
+    
+    for (int i = 0; i < num; i++) {
+        fread(pic1, 1, w * h, fp1);
+        fread(pic2, 1, w * h, fp2);
+        
+        double mse_sum = 0, mse = 0, psnr = 0;
+        for (int j = 0; j < w * h; j++) {
+            mse_sum += pow((double)(pic1[j] - pic2[j]), 2);
+        }
+        mse = mse_sum / (w * h);
+        psnr = 10 * log10(255.0 * 255.0 / mse);
+        printf("%5.3f\n", psnr);
+        
+        fseek(fp1, w * h / 2, SEEK_CUR);
+        fseek(fp2, w * h / 2, SEEK_CUR);
+    }
+    free(pic1);
+    free(pic2);
+    fclose(fp1);
+    fclose(fp2);
     return 0;
 }

@@ -25,6 +25,8 @@ int main(int argc, const char * argv[]) {
     
     simplest_yuv420_graybar(640, 360, 0, 255, 10, "graybar_640x360.yuv");
     
+    simplest_yuv420_psnr("lena_256x256_yuv420p.yuv", "lena_distort_256x256_yuv420p.yuv", 256, 256, 1);
+    
     return 0;
 }
 
