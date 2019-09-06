@@ -84,5 +84,15 @@ int simplest_yuv420_graybar(int width, int height, int ymin, int ymax, int barnu
  */
 int simplest_yuv420_psnr(const char *url1, const char *url2, int w, int h, int num);
 
+/**
+ 分离RGB24像素数据中的R、G、B分量
+
+ @param url 输入rgb文件路径
+ @param w 输入rgb文件宽
+ @param h 输入rgb文件高
+ @param num 处理的帧数
+ */
+int simplest_rgb24_split(const char *url, int w, int h, int num);
+
 
 #endif /* simplest_mediadata_raw_h */

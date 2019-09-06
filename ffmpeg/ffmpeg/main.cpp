@@ -27,6 +27,8 @@ int main(int argc, const char * argv[]) {
     
     simplest_yuv420_psnr("lena_256x256_yuv420p.yuv", "lena_distort_256x256_yuv420p.yuv", 256, 256, 1);
     
+    simplest_rgb24_split("cie1931_500x500.rgb", 500, 500, 1);
+    
     return 0;
 }
 

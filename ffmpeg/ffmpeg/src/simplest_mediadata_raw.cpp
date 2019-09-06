@@ -281,3 +281,39 @@ int simplest_yuv420_psnr(const char *url1, const char *url2, int w, int h, int n
     fclose(fp2);
     return 0;
 }
+
+
+/**
+ 分离RGB24像素数据中的R、G、B分量
+ 
+ @param url 输入rgb文件路径
+ @param w 输入rgb文件宽
+ @param h 输入rgb文件高
+ @param num 处理的帧数
+ */
+int simplest_rgb24_split(const char *url, int w, int h, int num) {
+    FILE *fp = fopen(url, "rb+");
+    FILE *fp1 = fopen("output_r.yuv", "wb+");
+    FILE *fp2 = fopen("output_g.yuv", "wb+");
+    FILE *fp3 = fopen("output_b.yuv", "wb+");
+    
+    unsigned char *pic = (unsigned char *)malloc(w * h * 3);
+    for (int i = 0; i < num; i++) {
+        fread(pic, 1, w * h * 3, fp);
+        
+        for (int j = 0; j < w * h * 3; j = j + 3) {
+            // R
+            fwrite(pic + j, 1, 1, fp1);
+            // G
+            fwrite(pic + j + 1, 1, 1, fp2);
+            // B
+            fwrite(pic + j + 2, 1, 1, fp3);
+        }
+    }
+    free(pic);
+    fclose(fp);
+    fclose(fp1);
+    fclose(fp2);
+    fclose(fp3);
+    return 0;
+}
