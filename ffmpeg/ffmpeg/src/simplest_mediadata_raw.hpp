@@ -104,5 +104,16 @@ int simplest_rgb24_split(const char *url, int w, int h, int num);
  */
 int simplest_rgb24_to_bmp(const char *rgb24path, int width, int height, const char *bmppath);
 
+/**
+ 将RGB24格式像素数据转换为YUV420P格式像素数据
+
+ @param url_in 输入rgb文件路径
+ @param w 输入rgb文件宽
+ @param h 输入rgb文件高
+ @param num 帧率
+ @param url_out 输出yuv文件路径
+ */
+int simplest_rgb24_to_yuv420(const char *url_in, int w, int h, int num, const char *url_out);
+
 
 #endif /* simplest_mediadata_raw_h */

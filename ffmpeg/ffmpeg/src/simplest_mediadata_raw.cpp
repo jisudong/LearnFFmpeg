@@ -401,3 +401,72 @@ int simplest_rgb24_to_bmp(const char *rgb24path, int width, int height, const ch
     printf("Finish generate %s!\n", bmppath);
     return 0;
 }
+
+
+unsigned char clip_value(unsigned char x, unsigned char min_val, unsigned char max_val) {
+    if (x > max_val) {
+        return max_val;
+    } else if (x < min_val) {
+        return min_val;
+    } else {
+        return x;
+    }
+}
+// RGB to YUV420
+bool rgb24_to_yuv420(unsigned char *rgbBuf, int w, int h, unsigned char *yuvBuf) {
+    unsigned char *ptrY, *ptrU, *ptrV, *ptrRGB;
+    memset(yuvBuf, 0, w * h * 3 / 2);
+    ptrY = yuvBuf;
+    ptrU = yuvBuf + w * h;
+    ptrV = ptrU + (w * h / 4);
+    unsigned char y, u, v, r, g, b;
+    for (int j = 0; j < h; j++) {
+        ptrRGB = rgbBuf + w * j * 3;
+        for (int i = 0; i < w; i++) {
+            r = *(ptrRGB++);
+            g = *(ptrRGB++);
+            b = *(ptrRGB++);
+            y = (unsigned char)((66 * r + 129 * g + 25 * b + 128) >> 8) + 16;
+            u = (unsigned char)((-38 * r - 74 * g + 112 * b + 128) >> 8) + 128;
+            v = (unsigned char)((112 * r - 94 * g -  18 * b + 128) >> 8) + 128;
+            *(ptrY++) = clip_value(y, 0, 255);
+            if (j % 2 == 0 && i % 2 == 0) {
+                *(ptrU++) = clip_value(u, 0, 255);
+            } else {
+                if (i % 2 == 0) {
+                    *(ptrV++) = clip_value(v, 0, 255);
+                }
+            }
+        }
+    }
+    return true;
+}
+
+/**
+ 将RGB24格式像素数据转换为YUV420P格式像素数据
+ 
+ @param url_in 输入rgb文件路径
+ @param w 输入rgb文件宽
+ @param h 输入rgb文件高
+ @param num 帧率
+ @param url_out 输出yuv文件路径
+ */
+int simplest_rgb24_to_yuv420(const char *url_in, int w, int h, int num, const char *url_out) {
+    FILE *fp = fopen(url_in, "rb+");
+    FILE *fp1 = fopen(url_out, "wb+");
+    
+    unsigned char *pic_rgb24 = (unsigned char *)malloc(w * h * 3);
+    unsigned char *pic_yuv420 = (unsigned char *)malloc(w * h * 3 / 2);
+    
+    for (int i = 0; i < num; i++) {
+        fread(pic_rgb24, 1, w * h * 3, fp);
+        rgb24_to_yuv420(pic_rgb24, w, h, pic_yuv420);
+        fwrite(pic_yuv420, 1, w * h * 3 / 2, fp1);
+    }
+    
+    free(pic_rgb24);
+    free(pic_yuv420);
+    fclose(fp);
+    fclose(fp1);
+    return 0;
+}

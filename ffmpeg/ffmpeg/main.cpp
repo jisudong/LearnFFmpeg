@@ -31,6 +31,8 @@ int main(int argc, const char * argv[]) {
     
     simplest_rgb24_to_bmp("lena_256x256_rgb24.rgb", 256, 256, "output_lena.bmp");
     
+    simplest_rgb24_to_yuv420("lena_256x256_rgb24.rgb", 256, 256, 1, "output_lena.yuv");
+    
     return 0;
 }
 
