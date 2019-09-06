@@ -94,5 +94,15 @@ int simplest_yuv420_psnr(const char *url1, const char *url2, int w, int h, int n
  */
 int simplest_rgb24_split(const char *url, int w, int h, int num);
 
+/**
+ 将RGB24格式像素数据封装为BMP图像
+
+ @param rgb24path 输入rgb文件路径
+ @param width 输入rgb文件宽
+ @param height 输入rgb文件高
+ @param bmppath 输出bmp文件路径
+ */
+int simplest_rgb24_to_bmp(const char *rgb24path, int width, int height, const char *bmppath);
+
 
 #endif /* simplest_mediadata_raw_h */

@@ -29,6 +29,8 @@ int main(int argc, const char * argv[]) {
     
     simplest_rgb24_split("cie1931_500x500.rgb", 500, 500, 1);
     
+    simplest_rgb24_to_bmp("lena_256x256_rgb24.rgb", 256, 256, "output_lena.bmp");
+    
     return 0;
 }
 
