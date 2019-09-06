@@ -33,6 +33,8 @@ int main(int argc, const char * argv[]) {
     
     simplest_rgb24_to_yuv420("lena_256x256_rgb24.rgb", 256, 256, 1, "output_lena.yuv");
     
+    simplest_rgb24_colorbar(640, 360, "colorbar_640x360.rgb");
+    
     return 0;
 }
 

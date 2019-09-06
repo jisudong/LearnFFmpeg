@@ -115,5 +115,14 @@ int simplest_rgb24_to_bmp(const char *rgb24path, int width, int height, const ch
  */
 int simplest_rgb24_to_yuv420(const char *url_in, int w, int h, int num, const char *url_out);
 
+/**
+ 生成RGB24格式的彩条测试图
+
+ @param width 输出rgb文件宽
+ @param height 输出rgb文件高
+ @param url_out 输出rgb文件路径
+ */
+int simplest_rgb24_colorbar(int width, int height, const char *url_out);
+
 
 #endif /* simplest_mediadata_raw_h */
