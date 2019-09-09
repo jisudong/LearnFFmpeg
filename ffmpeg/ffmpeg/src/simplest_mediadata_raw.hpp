@@ -141,5 +141,12 @@ int simplest_pcm16le_split(const char *url);
  */
 int simplest_pcm16le_halfvolumeleft(const char *url);
 
+/**
+ 将PCM16LE双声道音频采样数据的声音速度提高一倍
+
+ @param url 输入pcm文件路径
+ */
+int simplest_pcm16le_doublespeed(const char *url);
+
 
 #endif /* simplest_mediadata_raw_h */
