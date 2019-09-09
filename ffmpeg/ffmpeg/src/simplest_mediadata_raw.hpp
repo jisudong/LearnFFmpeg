@@ -164,5 +164,15 @@ int simplest_pcm16le_to_pcm8(const char *url);
  */
 int simplest_pcm16le_cut_singlechannel(const char *url, int start_num, int dur_num);
 
+/**
+ 将PCM16LE双声道音频采样数据转换为WAVE格式音频数据
+
+ @param pcmpath 输入pcm文件路径
+ @param channels pcm声道数
+ @param sample_rate pcm采样频率
+ @param wavepath 输出wav文件路径
+ */
+int simplest_pcm16le_to_wave(const char *pcmpath, int channels, int sample_rate, const char *wavepath);
+
 
 #endif /* simplest_mediadata_raw_h */

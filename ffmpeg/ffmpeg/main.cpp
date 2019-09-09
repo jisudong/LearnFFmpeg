@@ -45,6 +45,8 @@ int main(int argc, const char * argv[]) {
     
     simplest_pcm16le_cut_singlechannel("drum.pcm", 2360, 120);
     
+    simplest_pcm16le_to_wave("NocturneNo2inEflat_44.1k_s16le.pcm", 2, 44100, "output_nocturne.wav");
+    
     return 0;
 }
 
