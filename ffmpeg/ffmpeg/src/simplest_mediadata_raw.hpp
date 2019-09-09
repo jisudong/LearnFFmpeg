@@ -148,5 +148,12 @@ int simplest_pcm16le_halfvolumeleft(const char *url);
  */
 int simplest_pcm16le_doublespeed(const char *url);
 
+/**
+ 将PCM16LE双声道音频采样数据转换为PCM8音频采样数据
+
+ @param url 输入pcm文件路径
+ */
+int simplest_pcm16le_to_pcm8(const char *url);
+
 
 #endif /* simplest_mediadata_raw_h */
