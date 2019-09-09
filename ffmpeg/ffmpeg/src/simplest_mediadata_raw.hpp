@@ -155,5 +155,14 @@ int simplest_pcm16le_doublespeed(const char *url);
  */
 int simplest_pcm16le_to_pcm8(const char *url);
 
+/**
+ 将从PCM16LE单声道音频采样数据中截取一部分数据
+
+ @param url pcm文件路径
+ @param start_num 开始点
+ @param dur_num 裁剪点数量
+ */
+int simplest_pcm16le_cut_singlechannel(const char *url, int start_num, int dur_num);
+
 
 #endif /* simplest_mediadata_raw_h */
