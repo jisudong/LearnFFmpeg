@@ -10,6 +10,8 @@
 #include <iostream>
 #include <math.h>
 
+#pragma mark - RGB、YUV像素数据处理
+
 /**
  Split Y, U, V planes in YUV420P file.
  
@@ -563,5 +565,35 @@ int simplest_rgb24_colorbar(int width, int height, const char *url_out) {
     fwrite(data, width * height * 3, 1, fp);
     fclose(fp);
     free(data);
+    return 0;
+}
+
+
+
+#pragma mark - PCM音频采样数据处理
+
+/**
+ 分离PCM16LE双声道音频采样数据的左声道和右声道
+ 
+ @param url 输入pcm文件路径
+ */
+int simplest_pcm16le_split(const char *url) {
+    FILE *fp = fopen(url, "rb+");
+    FILE *fp1 = fopen("output_l.pcm", "wb+");
+    FILE *fp2 = fopen("output_r.pcm", "wb+");
+    
+    unsigned char *sample = (unsigned char *)malloc(4);
+    while (!feof(fp)) {
+        fread(sample, 1, 4, fp);
+        // L
+        fwrite(sample, 1, 2, fp1);
+        // R
+        fwrite(sample + 2, 1, 2, fp2);
+    }
+    
+    free(sample);
+    fclose(fp);
+    fclose(fp1);
+    fclose(fp2);
     return 0;
 }

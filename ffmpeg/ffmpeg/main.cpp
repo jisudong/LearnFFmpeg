@@ -35,6 +35,8 @@ int main(int argc, const char * argv[]) {
     
     simplest_rgb24_colorbar(640, 360, "colorbar_640x360.rgb");
     
+    simplest_pcm16le_split("NocturneNo2inEflat_44.1k_s16le.pcm");
+    
     return 0;
 }
 

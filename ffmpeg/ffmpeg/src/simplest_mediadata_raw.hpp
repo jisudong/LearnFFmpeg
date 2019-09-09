@@ -9,7 +9,7 @@
 #ifndef simplest_mediadata_raw_hpp
 #define simplest_mediadata_raw_hpp
 
-
+#pragma mark - RGB、YUV像素数据处理
 /**
  分离YUV420P像素数据中的Y、U、V分量
 
@@ -123,6 +123,16 @@ int simplest_rgb24_to_yuv420(const char *url_in, int w, int h, int num, const ch
  @param url_out 输出rgb文件路径
  */
 int simplest_rgb24_colorbar(int width, int height, const char *url_out);
+
+
+#pragma mark - PCM音频采样数据处理
+
+/**
+ 分离PCM16LE双声道音频采样数据的左声道和右声道
+
+ @param url 输入pcm文件路径
+ */
+int simplest_pcm16le_split(const char *url);
 
 
 #endif /* simplest_mediadata_raw_h */
