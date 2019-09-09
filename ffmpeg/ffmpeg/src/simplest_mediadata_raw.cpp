@@ -597,3 +597,37 @@ int simplest_pcm16le_split(const char *url) {
     fclose(fp2);
     return 0;
 }
+
+
+/**
+ 将PCM16LE双声道音频采样数据中左声道的音量降一半
+ 
+ @param url 输入pcm文件路径
+ */
+int simplest_pcm16le_halfvolumeleft(const char *url) {
+    FILE *fp = fopen(url, "rb+");
+    FILE *fp1 = fopen("output_halfleft.pcm", "wb+");
+    
+    int cnt = 0;
+    unsigned char *sample = (unsigned char *)malloc(4);
+    while (!feof(fp)) {
+        short *samplenum = NULL;
+        fread(sample, 1, 4, fp);
+        
+        samplenum = (short *)sample;
+        *samplenum = *samplenum / 2;
+        // L
+        fwrite(sample, 1, 2, fp1);
+        // R
+        fwrite(sample + 2, 1, 2, fp1);
+        
+        cnt++;
+    }
+    
+    printf("Sample Cnt:%d\n",cnt);
+    
+    free(sample);
+    fclose(fp);
+    fclose(fp1);
+    return 0;
+}

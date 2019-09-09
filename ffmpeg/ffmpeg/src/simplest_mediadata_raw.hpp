@@ -134,5 +134,12 @@ int simplest_rgb24_colorbar(int width, int height, const char *url_out);
  */
 int simplest_pcm16le_split(const char *url);
 
+/**
+ 将PCM16LE双声道音频采样数据中左声道的音量降一半
+
+ @param url 输入pcm文件路径
+ */
+int simplest_pcm16le_halfvolumeleft(const char *url);
+
 
 #endif /* simplest_mediadata_raw_h */
