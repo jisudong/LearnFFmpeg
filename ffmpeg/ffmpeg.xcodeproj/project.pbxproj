@@ -10,6 +10,7 @@
 		22C5ACA22320FA0A00E7707C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C5ACA12320FA0A00E7707C /* main.cpp */; };
 		22C5ACAA2320FF9200E7707C /* simplest_mediadata_raw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C5ACA92320FF9200E7707C /* simplest_mediadata_raw.cpp */; };
 		22C5ACAE23273B9200E7707C /* simplest_mediadata_h264.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C5ACAC23273B9200E7707C /* simplest_mediadata_h264.cpp */; };
+		22C5ACB12327837100E7707C /* simplest_mediadata_aac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C5ACAF2327837100E7707C /* simplest_mediadata_aac.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		22C5ACAB2321008C00E7707C /* simplest_mediadata_raw.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_raw.hpp; sourceTree = "<group>"; };
 		22C5ACAC23273B9200E7707C /* simplest_mediadata_h264.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_h264.cpp; sourceTree = "<group>"; };
 		22C5ACAD23273B9200E7707C /* simplest_mediadata_h264.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_h264.hpp; sourceTree = "<group>"; };
+		22C5ACAF2327837100E7707C /* simplest_mediadata_aac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_aac.cpp; sourceTree = "<group>"; };
+		22C5ACB02327837100E7707C /* simplest_mediadata_aac.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_aac.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,8 @@
 				22C5ACA92320FF9200E7707C /* simplest_mediadata_raw.cpp */,
 				22C5ACAD23273B9200E7707C /* simplest_mediadata_h264.hpp */,
 				22C5ACAC23273B9200E7707C /* simplest_mediadata_h264.cpp */,
+				22C5ACB02327837100E7707C /* simplest_mediadata_aac.hpp */,
+				22C5ACAF2327837100E7707C /* simplest_mediadata_aac.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22C5ACAA2320FF9200E7707C /* simplest_mediadata_raw.cpp in Sources */,
+				22C5ACB12327837100E7707C /* simplest_mediadata_aac.cpp in Sources */,
 				22C5ACA22320FA0A00E7707C /* main.cpp in Sources */,
 				22C5ACAE23273B9200E7707C /* simplest_mediadata_h264.cpp in Sources */,
 			);
