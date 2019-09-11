@@ -10,6 +10,7 @@
 #include "simplest_mediadata_raw.hpp"
 #include "simplest_mediadata_h264.hpp"
 #include "simplest_mediadata_aac.hpp"
+#include "simplest_mediadata_flv.hpp"
 
 
 int main(int argc, const char * argv[]) {
@@ -49,9 +50,11 @@ int main(int argc, const char * argv[]) {
     
     simplest_pcm16le_to_wave("NocturneNo2inEflat_44.1k_s16le.pcm", 2, 44100, "output_nocturne.wav");
     
-    simplest_h264_parser("sintel.h264");
+//    simplest_h264_parser("sintel.h264");
+//    
+//    simplest_aac_parser("nocturne.aac");
     
-    simplest_aac_parser("nocturne.aac");
+    simplest_flv_parser("cuc_ieschool.flv");
     
     return 0;
 }
