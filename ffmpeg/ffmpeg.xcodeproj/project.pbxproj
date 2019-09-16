@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22707EEA232F3F0900344272 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22707EE9232F3F0900344272 /* SDL2.framework */; };
+		22707EF6232F3FDF00344272 /* simplest_mediadata_flv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EEC232F3FDF00344272 /* simplest_mediadata_flv.cpp */; };
+		22707EF7232F3FDF00344272 /* simplest_mediadata_udp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EED232F3FDF00344272 /* simplest_mediadata_udp.cpp */; };
+		22707EF8232F3FDF00344272 /* simplest_mediadata_aac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EF1232F3FDF00344272 /* simplest_mediadata_aac.cpp */; };
+		22707EF9232F3FDF00344272 /* simplest_mediadata_h264.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EF3232F3FDF00344272 /* simplest_mediadata_h264.cpp */; };
+		22707EFA232F3FDF00344272 /* simplest_mediadata_raw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EF4232F3FDF00344272 /* simplest_mediadata_raw.cpp */; };
 		22C5ACA22320FA0A00E7707C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C5ACA12320FA0A00E7707C /* main.cpp */; };
-		22C5ACAA2320FF9200E7707C /* simplest_mediadata_raw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C5ACA92320FF9200E7707C /* simplest_mediadata_raw.cpp */; };
-		22C5ACAE23273B9200E7707C /* simplest_mediadata_h264.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C5ACAC23273B9200E7707C /* simplest_mediadata_h264.cpp */; };
-		22C5ACB12327837100E7707C /* simplest_mediadata_aac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C5ACAF2327837100E7707C /* simplest_mediadata_aac.cpp */; };
-		22C5ACB42328958100E7707C /* simplest_mediadata_flv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C5ACB22328958100E7707C /* simplest_mediadata_flv.cpp */; };
-		22C5ACB72328F6B500E7707C /* simplest_mediadata_udp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C5ACB52328F6B500E7707C /* simplest_mediadata_udp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,18 +29,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		22707EE9232F3F0900344272 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2.framework; sourceTree = "<group>"; };
+		22707EEC232F3FDF00344272 /* simplest_mediadata_flv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_flv.cpp; sourceTree = "<group>"; };
+		22707EED232F3FDF00344272 /* simplest_mediadata_udp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_udp.cpp; sourceTree = "<group>"; };
+		22707EEE232F3FDF00344272 /* simplest_mediadata_raw.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_raw.hpp; sourceTree = "<group>"; };
+		22707EEF232F3FDF00344272 /* simplest_mediadata_udp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_udp.hpp; sourceTree = "<group>"; };
+		22707EF0232F3FDF00344272 /* simplest_mediadata_aac.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_aac.hpp; sourceTree = "<group>"; };
+		22707EF1232F3FDF00344272 /* simplest_mediadata_aac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_aac.cpp; sourceTree = "<group>"; };
+		22707EF2232F3FDF00344272 /* simplest_mediadata_flv.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_flv.hpp; sourceTree = "<group>"; };
+		22707EF3232F3FDF00344272 /* simplest_mediadata_h264.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_h264.cpp; sourceTree = "<group>"; };
+		22707EF4232F3FDF00344272 /* simplest_mediadata_raw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_raw.cpp; sourceTree = "<group>"; };
+		22707EF5232F3FDF00344272 /* simplest_mediadata_h264.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_h264.hpp; sourceTree = "<group>"; };
 		22C5AC9E2320FA0A00E7707C /* ffmpeg */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ffmpeg; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C5ACA12320FA0A00E7707C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		22C5ACA92320FF9200E7707C /* simplest_mediadata_raw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_raw.cpp; sourceTree = "<group>"; };
-		22C5ACAB2321008C00E7707C /* simplest_mediadata_raw.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_raw.hpp; sourceTree = "<group>"; };
-		22C5ACAC23273B9200E7707C /* simplest_mediadata_h264.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_h264.cpp; sourceTree = "<group>"; };
-		22C5ACAD23273B9200E7707C /* simplest_mediadata_h264.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_h264.hpp; sourceTree = "<group>"; };
-		22C5ACAF2327837100E7707C /* simplest_mediadata_aac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_aac.cpp; sourceTree = "<group>"; };
-		22C5ACB02327837100E7707C /* simplest_mediadata_aac.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_aac.hpp; sourceTree = "<group>"; };
-		22C5ACB22328958100E7707C /* simplest_mediadata_flv.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_flv.cpp; sourceTree = "<group>"; };
-		22C5ACB32328958100E7707C /* simplest_mediadata_flv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_flv.hpp; sourceTree = "<group>"; };
-		22C5ACB52328F6B500E7707C /* simplest_mediadata_udp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_udp.cpp; sourceTree = "<group>"; };
-		22C5ACB62328F6B500E7707C /* simplest_mediadata_udp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_udp.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,12 +49,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22707EEA232F3F0900344272 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22707EE8232F3EF900344272 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				22707EE9232F3F0900344272 /* SDL2.framework */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		22707EEB232F3FA500344272 /* simplest_mediadata_test */ = {
+			isa = PBXGroup;
+			children = (
+				22707EEE232F3FDF00344272 /* simplest_mediadata_raw.hpp */,
+				22707EF4232F3FDF00344272 /* simplest_mediadata_raw.cpp */,
+				22707EF5232F3FDF00344272 /* simplest_mediadata_h264.hpp */,
+				22707EF3232F3FDF00344272 /* simplest_mediadata_h264.cpp */,
+				22707EF0232F3FDF00344272 /* simplest_mediadata_aac.hpp */,
+				22707EF1232F3FDF00344272 /* simplest_mediadata_aac.cpp */,
+				22707EF2232F3FDF00344272 /* simplest_mediadata_flv.hpp */,
+				22707EEC232F3FDF00344272 /* simplest_mediadata_flv.cpp */,
+				22707EEF232F3FDF00344272 /* simplest_mediadata_udp.hpp */,
+				22707EED232F3FDF00344272 /* simplest_mediadata_udp.cpp */,
+			);
+			path = simplest_mediadata_test;
+			sourceTree = "<group>";
+		};
+		22707EFB232F406400344272 /* simplest_ffmpeg_player */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = simplest_ffmpeg_player;
+			sourceTree = "<group>";
+		};
 		22C5AC952320FA0A00E7707C = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +107,7 @@
 		22C5ACA02320FA0A00E7707C /* ffmpeg */ = {
 			isa = PBXGroup;
 			children = (
+				22707EE8232F3EF900344272 /* lib */,
 				22C5ACA82320FA5A00E7707C /* src */,
 				22C5ACA12320FA0A00E7707C /* main.cpp */,
 			);
@@ -81,16 +117,8 @@
 		22C5ACA82320FA5A00E7707C /* src */ = {
 			isa = PBXGroup;
 			children = (
-				22C5ACAB2321008C00E7707C /* simplest_mediadata_raw.hpp */,
-				22C5ACA92320FF9200E7707C /* simplest_mediadata_raw.cpp */,
-				22C5ACAD23273B9200E7707C /* simplest_mediadata_h264.hpp */,
-				22C5ACAC23273B9200E7707C /* simplest_mediadata_h264.cpp */,
-				22C5ACB02327837100E7707C /* simplest_mediadata_aac.hpp */,
-				22C5ACAF2327837100E7707C /* simplest_mediadata_aac.cpp */,
-				22C5ACB32328958100E7707C /* simplest_mediadata_flv.hpp */,
-				22C5ACB22328958100E7707C /* simplest_mediadata_flv.cpp */,
-				22C5ACB62328F6B500E7707C /* simplest_mediadata_udp.hpp */,
-				22C5ACB52328F6B500E7707C /* simplest_mediadata_udp.cpp */,
+				22707EEB232F3FA500344272 /* simplest_mediadata_test */,
+				22707EFB232F406400344272 /* simplest_ffmpeg_player */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -151,12 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22C5ACAA2320FF9200E7707C /* simplest_mediadata_raw.cpp in Sources */,
-				22C5ACB72328F6B500E7707C /* simplest_mediadata_udp.cpp in Sources */,
-				22C5ACB42328958100E7707C /* simplest_mediadata_flv.cpp in Sources */,
-				22C5ACB12327837100E7707C /* simplest_mediadata_aac.cpp in Sources */,
+				22707EF6232F3FDF00344272 /* simplest_mediadata_flv.cpp in Sources */,
+				22707EF8232F3FDF00344272 /* simplest_mediadata_aac.cpp in Sources */,
+				22707EF7232F3FDF00344272 /* simplest_mediadata_udp.cpp in Sources */,
+				22707EF9232F3FDF00344272 /* simplest_mediadata_h264.cpp in Sources */,
+				22707EFA232F3FDF00344272 /* simplest_mediadata_raw.cpp in Sources */,
 				22C5ACA22320FA0A00E7707C /* main.cpp in Sources */,
-				22C5ACAE23273B9200E7707C /* simplest_mediadata_h264.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +306,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ffmpeg/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -286,6 +318,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ffmpeg/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
