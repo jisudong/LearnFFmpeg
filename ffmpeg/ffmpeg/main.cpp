@@ -11,6 +11,7 @@
 #include "simplest_mediadata_h264.hpp"
 #include "simplest_mediadata_aac.hpp"
 #include "simplest_mediadata_flv.hpp"
+#include "simplest_ffmpeg_player.hpp"
 
 
 int main(int argc, const char * argv[]) {
@@ -54,7 +55,10 @@ int main(int argc, const char * argv[]) {
 //    
 //    simplest_aac_parser("nocturne.aac");
     
-    simplest_flv_parser("cuc_ieschool.flv");
+//    simplest_flv_parser("cuc_ieschool.flv");
+    
+    ffmpeg_player();
+    
     
     return 0;
 }
