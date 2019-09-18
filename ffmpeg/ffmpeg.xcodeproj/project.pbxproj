@@ -205,8 +205,8 @@
 		22B6DE5A2332330200D048F0 /* simplest_ffmpeg_decoder_pure */ = {
 			isa = PBXGroup;
 			children = (
-				22B6DE5B2332335600D048F0 /* simplest_ffmpeg_decoder_pure.cpp */,
 				22B6DE5C2332335600D048F0 /* simplest_ffmpeg_decoder_pure.hpp */,
+				22B6DE5B2332335600D048F0 /* simplest_ffmpeg_decoder_pure.cpp */,
 			);
 			path = simplest_ffmpeg_decoder_pure;
 			sourceTree = "<group>";

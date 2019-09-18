@@ -9,6 +9,6 @@
 #ifndef simplest_ffmpeg_decoder_pure_hpp
 #define simplest_ffmpeg_decoder_pure_hpp
 
-#include <stdio.h>
+int ffmpeg_decoder_pure();
 
 #endif /* simplest_ffmpeg_decoder_pure_hpp */
