@@ -18,6 +18,8 @@ extern "C" {
 #include <SDL2/SDL.h>
 }
 
+void waitKeyboard();
+
 #define OUTPUT_YUV420P 0
 
 int ffmpeg_player() {
@@ -149,6 +151,10 @@ int ffmpeg_player() {
                 SDL_RenderClear(sdlRenderer);
                 SDL_RenderCopy(sdlRenderer, sdlTexture, NULL, &sdlRect);
                 SDL_RenderPresent(sdlRenderer);
+                
+                SDL_Event event;
+                SDL_PollEvent(&event);
+                
                 // SDL End -------------------
                 // Delay 40ms
                 SDL_Delay(40);
@@ -156,6 +162,7 @@ int ffmpeg_player() {
         }
         av_free_packet(packet);
     }
+   
     
     // flush decoder
     // fix: flush frames remained in codec
@@ -190,6 +197,7 @@ int ffmpeg_player() {
     fclose(fp_yuv);
 #endif
     
+    waitKeyboard();
     SDL_Quit();
     
     av_frame_free(&pFrameYUV);
@@ -200,4 +208,21 @@ int ffmpeg_player() {
     
     
     return 0;
+}
+
+void waitKeyboard() {
+    int quit = 0;
+    SDL_Event event;
+    while (quit != 1) {
+        SDL_WaitEvent(&event);
+        switch (event.type) {
+            case SDL_QUIT:
+                quit = 1;
+                break;
+                
+            default:
+                SDL_Log(".");
+                break;
+        }
+    }
 }
