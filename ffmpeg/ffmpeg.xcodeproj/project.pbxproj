@@ -29,6 +29,7 @@
 		22B6DE512331E24B00D048F0 /* libavcodec.58.35.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B6DE482331E24B00D048F0 /* libavcodec.58.35.100.dylib */; };
 		22B6DE522331E24B00D048F0 /* libavformat.58.20.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B6DE492331E24B00D048F0 /* libavformat.58.20.100.dylib */; };
 		22B6DE532331E24B00D048F0 /* libavresample.4.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B6DE4A2331E24B00D048F0 /* libavresample.4.0.0.dylib */; };
+		22B6DE592332163800D048F0 /* simplest_ffmpeg_player_su.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22B6DE572332163800D048F0 /* simplest_ffmpeg_player_su.cpp */; };
 		22C5ACA22320FA0A00E7707C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C5ACA12320FA0A00E7707C /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,8 @@
 		22B6DE482331E24B00D048F0 /* libavcodec.58.35.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.58.35.100.dylib; path = ffmpeg/lib/libavcodec.58.35.100.dylib; sourceTree = "<group>"; };
 		22B6DE492331E24B00D048F0 /* libavformat.58.20.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.58.20.100.dylib; path = ffmpeg/lib/libavformat.58.20.100.dylib; sourceTree = "<group>"; };
 		22B6DE4A2331E24B00D048F0 /* libavresample.4.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavresample.4.0.0.dylib; path = ffmpeg/lib/libavresample.4.0.0.dylib; sourceTree = "<group>"; };
+		22B6DE572332163800D048F0 /* simplest_ffmpeg_player_su.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_ffmpeg_player_su.cpp; sourceTree = "<group>"; };
+		22B6DE582332163800D048F0 /* simplest_ffmpeg_player_su.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_ffmpeg_player_su.hpp; sourceTree = "<group>"; };
 		22C5AC9E2320FA0A00E7707C /* ffmpeg */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ffmpeg; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C5ACA12320FA0A00E7707C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,8 +140,8 @@
 		22707EFB232F406400344272 /* simplest_ffmpeg_player */ = {
 			isa = PBXGroup;
 			children = (
-				22707EFD232F41F700344272 /* simplest_ffmpeg_player.hpp */,
-				22707EFC232F41F700344272 /* simplest_ffmpeg_player.cpp */,
+				22B6DE56233215D700D048F0 /* simplest_ffmpeg_player */,
+				22B6DE55233215A700D048F0 /* simplest_ffmpeg_player_su */,
 			);
 			path = simplest_ffmpeg_player;
 			sourceTree = "<group>";
@@ -175,6 +178,24 @@
 				22708DAA232F866200344272 /* libavdevice.58.5.100.dylib */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22B6DE55233215A700D048F0 /* simplest_ffmpeg_player_su */ = {
+			isa = PBXGroup;
+			children = (
+				22B6DE582332163800D048F0 /* simplest_ffmpeg_player_su.hpp */,
+				22B6DE572332163800D048F0 /* simplest_ffmpeg_player_su.cpp */,
+			);
+			path = simplest_ffmpeg_player_su;
+			sourceTree = "<group>";
+		};
+		22B6DE56233215D700D048F0 /* simplest_ffmpeg_player */ = {
+			isa = PBXGroup;
+			children = (
+				22707EFD232F41F700344272 /* simplest_ffmpeg_player.hpp */,
+				22707EFC232F41F700344272 /* simplest_ffmpeg_player.cpp */,
+			);
+			path = simplest_ffmpeg_player;
 			sourceTree = "<group>";
 		};
 		22C5AC952320FA0A00E7707C = {
@@ -276,6 +297,7 @@
 				22707EF9232F3FDF00344272 /* simplest_mediadata_h264.cpp in Sources */,
 				22707EFE232F41F700344272 /* simplest_ffmpeg_player.cpp in Sources */,
 				22707EFA232F3FDF00344272 /* simplest_mediadata_raw.cpp in Sources */,
+				22B6DE592332163800D048F0 /* simplest_ffmpeg_player_su.cpp in Sources */,
 				22C5ACA22320FA0A00E7707C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

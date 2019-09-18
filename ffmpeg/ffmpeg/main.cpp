@@ -12,6 +12,7 @@
 #include "simplest_mediadata_aac.hpp"
 #include "simplest_mediadata_flv.hpp"
 #include "simplest_ffmpeg_player.hpp"
+#include "simplest_ffmpeg_player_su.hpp"
 
 
 int main(int argc, const char * argv[]) {
@@ -57,7 +58,9 @@ int main(int argc, const char * argv[]) {
     
 //    simplest_flv_parser("cuc_ieschool.flv");
     
-    ffmpeg_player();
+//    ffmpeg_player();
+    
+    ffmpeg_player_su();
     
     
     return 0;
