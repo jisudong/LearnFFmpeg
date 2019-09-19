@@ -15,6 +15,7 @@
 #include "simplest_ffmpeg_player_su.hpp"
 #include "simplest_ffmpeg_decoder_pure.hpp"
 #include "simplest_ffmpeg_decoder.hpp"
+#include "simplest_video_play_sdl2.hpp"
 
 
 int main(int argc, const char * argv[]) {
@@ -66,7 +67,9 @@ int main(int argc, const char * argv[]) {
     
 //    ffmpeg_decoder_pure();
     
-    ffmpeg_decoder();
+//    ffmpeg_decoder();
+    
+    sdl2_play();
     
     
     return 0;
