@@ -12,7 +12,6 @@
 		22707EF8232F3FDF00344272 /* simplest_mediadata_aac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EF1232F3FDF00344272 /* simplest_mediadata_aac.cpp */; };
 		22707EF9232F3FDF00344272 /* simplest_mediadata_h264.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EF3232F3FDF00344272 /* simplest_mediadata_h264.cpp */; };
 		22707EFA232F3FDF00344272 /* simplest_mediadata_raw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EF4232F3FDF00344272 /* simplest_mediadata_raw.cpp */; };
-		22707EFE232F41F700344272 /* simplest_ffmpeg_player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EFC232F41F700344272 /* simplest_ffmpeg_player.cpp */; };
 		22708DB62330DD8500344272 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 22708DB52330DD8500344272 /* libiconv.tbd */; };
 		22708DB82330DD9A00344272 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 22708DB72330DD9A00344272 /* libbz2.tbd */; };
 		22708DBA2330DDAB00344272 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 22708DB92330DDAB00344272 /* libz.tbd */; };
@@ -29,11 +28,12 @@
 		22B6DE512331E24B00D048F0 /* libavcodec.58.35.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B6DE482331E24B00D048F0 /* libavcodec.58.35.100.dylib */; };
 		22B6DE522331E24B00D048F0 /* libavformat.58.20.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B6DE492331E24B00D048F0 /* libavformat.58.20.100.dylib */; };
 		22B6DE532331E24B00D048F0 /* libavresample.4.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B6DE4A2331E24B00D048F0 /* libavresample.4.0.0.dylib */; };
-		22B6DE592332163800D048F0 /* simplest_ffmpeg_player_su.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22B6DE572332163800D048F0 /* simplest_ffmpeg_player_su.cpp */; };
-		22B6DE5D2332335600D048F0 /* simplest_ffmpeg_decoder_pure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22B6DE5B2332335600D048F0 /* simplest_ffmpeg_decoder_pure.cpp */; };
-		22B6DE61233326E000D048F0 /* simplest_ffmpeg_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22B6DE5F233326E000D048F0 /* simplest_ffmpeg_decoder.cpp */; };
-		22B6DE65233357B800D048F0 /* simplest_video_play_sdl2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22B6DE63233357B800D048F0 /* simplest_video_play_sdl2.cpp */; };
-		22B6DE6A2333645D00D048F0 /* simplest_ffmpeg_helloworld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22B6DE682333645D00D048F0 /* simplest_ffmpeg_helloworld.cpp */; };
+		22B6DE782334711F00D048F0 /* simplest_ffmpeg_decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22B6DE6D2334711F00D048F0 /* simplest_ffmpeg_decoder.cpp */; };
+		22B6DE792334711F00D048F0 /* simplest_ffmpeg_player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22B6DE712334711F00D048F0 /* simplest_ffmpeg_player.cpp */; };
+		22B6DE7A2334711F00D048F0 /* simplest_video_play_sdl2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22B6DE722334711F00D048F0 /* simplest_video_play_sdl2.cpp */; };
+		22B6DE7B2334711F00D048F0 /* simplest_ffmpeg_player_su.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22B6DE732334711F00D048F0 /* simplest_ffmpeg_player_su.cpp */; };
+		22B6DE7C2334711F00D048F0 /* simplest_ffmpeg_helloworld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22B6DE752334711F00D048F0 /* simplest_ffmpeg_helloworld.cpp */; };
+		22B6DE7D2334711F00D048F0 /* simplest_ffmpeg_decoder_pure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22B6DE762334711F00D048F0 /* simplest_ffmpeg_decoder_pure.cpp */; };
 		22C5ACA22320FA0A00E7707C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22C5ACA12320FA0A00E7707C /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +60,6 @@
 		22707EF3232F3FDF00344272 /* simplest_mediadata_h264.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_h264.cpp; sourceTree = "<group>"; };
 		22707EF4232F3FDF00344272 /* simplest_mediadata_raw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_raw.cpp; sourceTree = "<group>"; };
 		22707EF5232F3FDF00344272 /* simplest_mediadata_h264.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_h264.hpp; sourceTree = "<group>"; };
-		22707EFC232F41F700344272 /* simplest_ffmpeg_player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_ffmpeg_player.cpp; sourceTree = "<group>"; };
-		22707EFD232F41F700344272 /* simplest_ffmpeg_player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_ffmpeg_player.hpp; sourceTree = "<group>"; };
 		22708DA9232F866200344272 /* libavcodec.58.35.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.58.35.100.dylib; path = ../../../../../../usr/local/Cellar/ffmpeg/4.1.4_2/lib/libavcodec.58.35.100.dylib; sourceTree = "<group>"; };
 		22708DAA232F866200344272 /* libavdevice.58.5.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavdevice.58.5.100.dylib; path = ../../../../../../usr/local/Cellar/ffmpeg/4.1.4_2/lib/libavdevice.58.5.100.dylib; sourceTree = "<group>"; };
 		22708DAD232F86B100344272 /* libavformat.58.20.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.58.20.100.dylib; path = ../../../../../../usr/local/Cellar/ffmpeg/4.1.4_2/lib/libavformat.58.20.100.dylib; sourceTree = "<group>"; };
@@ -83,16 +81,18 @@
 		22B6DE482331E24B00D048F0 /* libavcodec.58.35.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.58.35.100.dylib; path = ffmpeg/lib/libavcodec.58.35.100.dylib; sourceTree = "<group>"; };
 		22B6DE492331E24B00D048F0 /* libavformat.58.20.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.58.20.100.dylib; path = ffmpeg/lib/libavformat.58.20.100.dylib; sourceTree = "<group>"; };
 		22B6DE4A2331E24B00D048F0 /* libavresample.4.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavresample.4.0.0.dylib; path = ffmpeg/lib/libavresample.4.0.0.dylib; sourceTree = "<group>"; };
-		22B6DE572332163800D048F0 /* simplest_ffmpeg_player_su.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_ffmpeg_player_su.cpp; sourceTree = "<group>"; };
-		22B6DE582332163800D048F0 /* simplest_ffmpeg_player_su.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_ffmpeg_player_su.hpp; sourceTree = "<group>"; };
-		22B6DE5B2332335600D048F0 /* simplest_ffmpeg_decoder_pure.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_ffmpeg_decoder_pure.cpp; sourceTree = "<group>"; };
-		22B6DE5C2332335600D048F0 /* simplest_ffmpeg_decoder_pure.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_ffmpeg_decoder_pure.hpp; sourceTree = "<group>"; };
-		22B6DE5F233326E000D048F0 /* simplest_ffmpeg_decoder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_ffmpeg_decoder.cpp; sourceTree = "<group>"; };
-		22B6DE60233326E000D048F0 /* simplest_ffmpeg_decoder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_ffmpeg_decoder.hpp; sourceTree = "<group>"; };
-		22B6DE63233357B800D048F0 /* simplest_video_play_sdl2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_video_play_sdl2.cpp; sourceTree = "<group>"; };
-		22B6DE64233357B800D048F0 /* simplest_video_play_sdl2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_video_play_sdl2.hpp; sourceTree = "<group>"; };
-		22B6DE682333645D00D048F0 /* simplest_ffmpeg_helloworld.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_ffmpeg_helloworld.cpp; sourceTree = "<group>"; };
-		22B6DE692333645D00D048F0 /* simplest_ffmpeg_helloworld.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_ffmpeg_helloworld.hpp; sourceTree = "<group>"; };
+		22B6DE6C2334711F00D048F0 /* simplest_video_play_sdl2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_video_play_sdl2.hpp; sourceTree = "<group>"; };
+		22B6DE6D2334711F00D048F0 /* simplest_ffmpeg_decoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_ffmpeg_decoder.cpp; sourceTree = "<group>"; };
+		22B6DE6E2334711F00D048F0 /* simplest_ffmpeg_helloworld.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_ffmpeg_helloworld.hpp; sourceTree = "<group>"; };
+		22B6DE6F2334711F00D048F0 /* simplest_ffmpeg_player_su.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_ffmpeg_player_su.hpp; sourceTree = "<group>"; };
+		22B6DE702334711F00D048F0 /* simplest_ffmpeg_player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_ffmpeg_player.hpp; sourceTree = "<group>"; };
+		22B6DE712334711F00D048F0 /* simplest_ffmpeg_player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_ffmpeg_player.cpp; sourceTree = "<group>"; };
+		22B6DE722334711F00D048F0 /* simplest_video_play_sdl2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_video_play_sdl2.cpp; sourceTree = "<group>"; };
+		22B6DE732334711F00D048F0 /* simplest_ffmpeg_player_su.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_ffmpeg_player_su.cpp; sourceTree = "<group>"; };
+		22B6DE742334711F00D048F0 /* simplest_ffmpeg_decoder_pure.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_ffmpeg_decoder_pure.hpp; sourceTree = "<group>"; };
+		22B6DE752334711F00D048F0 /* simplest_ffmpeg_helloworld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_ffmpeg_helloworld.cpp; sourceTree = "<group>"; };
+		22B6DE762334711F00D048F0 /* simplest_ffmpeg_decoder_pure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_ffmpeg_decoder_pure.cpp; sourceTree = "<group>"; };
+		22B6DE772334711F00D048F0 /* simplest_ffmpeg_decoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_ffmpeg_decoder.hpp; sourceTree = "<group>"; };
 		22C5AC9E2320FA0A00E7707C /* ffmpeg */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ffmpeg; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C5ACA12320FA0A00E7707C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,12 +152,18 @@
 		22707EFB232F406400344272 /* simplest_ffmpeg_player */ = {
 			isa = PBXGroup;
 			children = (
-				22B6DE672333642A00D048F0 /* simplest_ffmpeg_helloworld */,
-				22B6DE622333575900D048F0 /* simplest_video_play_sdl2 */,
-				22B6DE5E233326C600D048F0 /* simplest_ffmpeg_decoder */,
-				22B6DE5A2332330200D048F0 /* simplest_ffmpeg_decoder_pure */,
-				22B6DE56233215D700D048F0 /* simplest_ffmpeg_player */,
-				22B6DE55233215A700D048F0 /* simplest_ffmpeg_player_su */,
+				22B6DE742334711F00D048F0 /* simplest_ffmpeg_decoder_pure.hpp */,
+				22B6DE762334711F00D048F0 /* simplest_ffmpeg_decoder_pure.cpp */,
+				22B6DE772334711F00D048F0 /* simplest_ffmpeg_decoder.hpp */,
+				22B6DE6D2334711F00D048F0 /* simplest_ffmpeg_decoder.cpp */,
+				22B6DE6E2334711F00D048F0 /* simplest_ffmpeg_helloworld.hpp */,
+				22B6DE752334711F00D048F0 /* simplest_ffmpeg_helloworld.cpp */,
+				22B6DE6F2334711F00D048F0 /* simplest_ffmpeg_player_su.hpp */,
+				22B6DE732334711F00D048F0 /* simplest_ffmpeg_player_su.cpp */,
+				22B6DE702334711F00D048F0 /* simplest_ffmpeg_player.hpp */,
+				22B6DE712334711F00D048F0 /* simplest_ffmpeg_player.cpp */,
+				22B6DE6C2334711F00D048F0 /* simplest_video_play_sdl2.hpp */,
+				22B6DE722334711F00D048F0 /* simplest_video_play_sdl2.cpp */,
 			);
 			path = simplest_ffmpeg_player;
 			sourceTree = "<group>";
@@ -196,58 +202,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		22B6DE55233215A700D048F0 /* simplest_ffmpeg_player_su */ = {
+		22B6DE6B23346F3400D048F0 /* simplest_ffmpeg_audio_player */ = {
 			isa = PBXGroup;
 			children = (
-				22B6DE582332163800D048F0 /* simplest_ffmpeg_player_su.hpp */,
-				22B6DE572332163800D048F0 /* simplest_ffmpeg_player_su.cpp */,
 			);
-			path = simplest_ffmpeg_player_su;
-			sourceTree = "<group>";
-		};
-		22B6DE56233215D700D048F0 /* simplest_ffmpeg_player */ = {
-			isa = PBXGroup;
-			children = (
-				22707EFD232F41F700344272 /* simplest_ffmpeg_player.hpp */,
-				22707EFC232F41F700344272 /* simplest_ffmpeg_player.cpp */,
-			);
-			path = simplest_ffmpeg_player;
-			sourceTree = "<group>";
-		};
-		22B6DE5A2332330200D048F0 /* simplest_ffmpeg_decoder_pure */ = {
-			isa = PBXGroup;
-			children = (
-				22B6DE5C2332335600D048F0 /* simplest_ffmpeg_decoder_pure.hpp */,
-				22B6DE5B2332335600D048F0 /* simplest_ffmpeg_decoder_pure.cpp */,
-			);
-			path = simplest_ffmpeg_decoder_pure;
-			sourceTree = "<group>";
-		};
-		22B6DE5E233326C600D048F0 /* simplest_ffmpeg_decoder */ = {
-			isa = PBXGroup;
-			children = (
-				22B6DE60233326E000D048F0 /* simplest_ffmpeg_decoder.hpp */,
-				22B6DE5F233326E000D048F0 /* simplest_ffmpeg_decoder.cpp */,
-			);
-			path = simplest_ffmpeg_decoder;
-			sourceTree = "<group>";
-		};
-		22B6DE622333575900D048F0 /* simplest_video_play_sdl2 */ = {
-			isa = PBXGroup;
-			children = (
-				22B6DE64233357B800D048F0 /* simplest_video_play_sdl2.hpp */,
-				22B6DE63233357B800D048F0 /* simplest_video_play_sdl2.cpp */,
-			);
-			path = simplest_video_play_sdl2;
-			sourceTree = "<group>";
-		};
-		22B6DE672333642A00D048F0 /* simplest_ffmpeg_helloworld */ = {
-			isa = PBXGroup;
-			children = (
-				22B6DE692333645D00D048F0 /* simplest_ffmpeg_helloworld.hpp */,
-				22B6DE682333645D00D048F0 /* simplest_ffmpeg_helloworld.cpp */,
-			);
-			path = simplest_ffmpeg_helloworld;
+			path = simplest_ffmpeg_audio_player;
 			sourceTree = "<group>";
 		};
 		22C5AC952320FA0A00E7707C = {
@@ -281,6 +240,7 @@
 		22C5ACA82320FA5A00E7707C /* src */ = {
 			isa = PBXGroup;
 			children = (
+				22B6DE6B23346F3400D048F0 /* simplest_ffmpeg_audio_player */,
 				22707EEB232F3FA500344272 /* simplest_mediadata_test */,
 				22707EFB232F406400344272 /* simplest_ffmpeg_player */,
 			);
@@ -343,18 +303,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22B6DE61233326E000D048F0 /* simplest_ffmpeg_decoder.cpp in Sources */,
+				22B6DE7D2334711F00D048F0 /* simplest_ffmpeg_decoder_pure.cpp in Sources */,
 				22707EF6232F3FDF00344272 /* simplest_mediadata_flv.cpp in Sources */,
+				22B6DE782334711F00D048F0 /* simplest_ffmpeg_decoder.cpp in Sources */,
+				22B6DE7B2334711F00D048F0 /* simplest_ffmpeg_player_su.cpp in Sources */,
+				22B6DE7A2334711F00D048F0 /* simplest_video_play_sdl2.cpp in Sources */,
 				22707EF8232F3FDF00344272 /* simplest_mediadata_aac.cpp in Sources */,
-				22B6DE65233357B800D048F0 /* simplest_video_play_sdl2.cpp in Sources */,
 				22707EF7232F3FDF00344272 /* simplest_mediadata_udp.cpp in Sources */,
-				22B6DE5D2332335600D048F0 /* simplest_ffmpeg_decoder_pure.cpp in Sources */,
+				22B6DE792334711F00D048F0 /* simplest_ffmpeg_player.cpp in Sources */,
+				22B6DE7C2334711F00D048F0 /* simplest_ffmpeg_helloworld.cpp in Sources */,
 				22707EF9232F3FDF00344272 /* simplest_mediadata_h264.cpp in Sources */,
-				22707EFE232F41F700344272 /* simplest_ffmpeg_player.cpp in Sources */,
 				22707EFA232F3FDF00344272 /* simplest_mediadata_raw.cpp in Sources */,
-				22B6DE592332163800D048F0 /* simplest_ffmpeg_player_su.cpp in Sources */,
 				22C5ACA22320FA0A00E7707C /* main.cpp in Sources */,
-				22B6DE6A2333645D00D048F0 /* simplest_ffmpeg_helloworld.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
