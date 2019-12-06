@@ -3,7 +3,7 @@
 int main(int argc, char* argv[])
 {
 	int ret;
-	ret = avpriv_io_move("111.txt", "222.txt");
+	ret = avpriv_io_move("222.txt", "111.txt");
 	if (ret < 0) {
 		av_log(NULL, AV_LOG_ERROR, "Failed to rename\n");
 	}
