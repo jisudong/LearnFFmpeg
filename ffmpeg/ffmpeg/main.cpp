@@ -72,7 +72,7 @@ int main(int argc, const char * argv[]) {
     
 //    sdl2_play();
     
-    printFFmpegInfo();
+//    printFFmpegInfo();
     
     
     return 0;
