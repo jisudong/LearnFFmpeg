@@ -114,7 +114,6 @@ int main(int argc, char **argv)
 	}
 
 	while (1) {
-		int i, ch;
 		int got_frame = 0;
 
 		if (!decoded_frame) {
