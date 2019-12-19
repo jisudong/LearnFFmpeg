@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <SDL.h>
 
-#define BLOCK_SIZE 4096000
+#define BLOCK_SIZE 2048000
 
 static Uint8 *audio_buf = NULL;
 static Uint8 *audio_pos = NULL;
