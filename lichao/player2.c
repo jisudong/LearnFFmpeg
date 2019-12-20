@@ -202,5 +202,5 @@ __FAIL:
 
 	SDL_Quit();
 		
-	
+    return ret;
 }
