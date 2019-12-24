@@ -20,12 +20,11 @@
 //
 // to play the video stream on your screen.
 
-
 #include <stdio.h>
 #include <assert.h>
 #include <math.h>
 
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
@@ -105,10 +104,10 @@ typedef struct VideoState {
 
 } VideoState;
 
-SDL_mutex       *texture_mutex;
-SDL_Window      *win;
-SDL_Renderer    *renderer;
-SDL_Texture     *texture;
+SDL_mutex       *texture_mutex = NULL;
+SDL_Window      *win = NULL;
+SDL_Renderer    *renderer = NULL;
+SDL_Texture     *texture = NULL;
 
 FILE            *audiofd = NULL;
 FILE            *audiofd1 = NULL;
@@ -284,11 +283,11 @@ void audio_callback(void *userdata, Uint8 *stream, int len) {
       is->audio_buf_index = 0;
     }
     len1 = is->audio_buf_size - is->audio_buf_index;
-    fprintf(stderr, "stream addr:%p, audio_buf_index:%d, len1:%d, len:%d\n",
-		    stream,
-	  	    is->audio_buf_index, 
-		    len1, 
-		    len);
+//    fprintf(stderr, "stream addr:%p, audio_buf_index:%d, len1:%d, len:%d\n",
+//		    stream,
+//	  	    is->audio_buf_index,
+//		    len1,
+//		    len);
     if(len1 > len)
       len1 = len;
     //memcpy(stream, (uint8_t *)is->audio_buf + is->audio_buf_index, len1);
@@ -635,7 +634,7 @@ int decode_thread(void *arg) {
   Uint32 pixformat;
 
   VideoState *is = (VideoState *)arg;
-  AVFormatContext *pFormatCtx;
+  AVFormatContext *pFormatCtx = NULL;
   AVPacket pkt1, *packet = &pkt1;
 
   int i;
@@ -646,12 +645,13 @@ int decode_thread(void *arg) {
   is->audioStream = -1;
 
   global_video_state = is;
-    
-    char *filename = is->filename;
 
   // Open video file
-  if(avformat_open_input(&pFormatCtx, filename, NULL, NULL)!=0)
-    return -1; // Couldn't open file
+    if(avformat_open_input(&pFormatCtx, is->filename, NULL, NULL)!=0) {
+        return -1; // Couldn't open file
+    } else {
+        fprintf(stderr, "success to open input -\n");
+    }
 
   is->pFormatCtx = pFormatCtx;
   
@@ -730,10 +730,10 @@ int decode_thread(void *arg) {
     // Is this a packet from the video stream?
     if(packet->stream_index == is->videoStream) {
       packet_queue_put(&is->videoq, packet);
-      fprintf(stderr, "put video queue, size :%d\n", is->videoq.nb_packets);
+//      fprintf(stderr, "put video queue, size :%d\n", is->videoq.nb_packets);
     } else if(packet->stream_index == is->audioStream) {
       packet_queue_put(&is->audioq, packet);
-      fprintf(stderr, "put audio queue, size :%d\n", is->audioq.nb_packets);
+//      fprintf(stderr, "put audio queue, size :%d\n", is->audioq.nb_packets);
     } else {
       av_free_packet(packet);
     }
@@ -789,13 +789,11 @@ int main(int argc, char *argv[]) {
 
   is->pictq_mutex = SDL_CreateMutex();
   is->pictq_cond = SDL_CreateCond();
-    
+
   //set timer
   schedule_refresh(is, 40);
-    
-   SDL_Thread *tid = SDL_CreateThread(decode_thread, "decode_thread", is);
-    is->parse_tid = tid;
 
+  is->parse_tid = SDL_CreateThread(decode_thread, "decode_thread", is);
   if(!is->parse_tid) {
     av_free(is);
     goto __FAIL;
@@ -803,23 +801,20 @@ int main(int argc, char *argv[]) {
 
   for(;;) {
 
-    SDL_WaitEvent(&event);
-    switch(event.type) {
-    case FF_QUIT_EVENT:
-    case SDL_QUIT:
-      fprintf(stderr, "receive a QUIT event: %d\n", event.type);
-      is->quit = 1;
-      //SDL_Quit();
-      //return 0;
-      goto __QUIT;
-      break;
-    case FF_REFRESH_EVENT:
-      //fprintf(stderr, "receive a refresh event: %d\n", event.type);
-      video_refresh_timer(event.user.data1);
-      break;
-    default:
-      break;
-    }
+      SDL_WaitEvent(&event);
+      if (event.type == FF_REFRESH_EVENT) {
+          fprintf(stderr, "receive a refresh event: %d\n", event.type);
+          video_refresh_timer(event.user.data1);
+      }else if (event.type == SDL_WINDOWEVENT) {
+          // if resize
+      }  else if (event.type == SDL_QUIT) {
+          fprintf(stderr, "receive a QUIT event: %d\n", event.type);
+          is->quit = 1;
+          
+      } else if (event.type == FF_QUIT_EVENT){
+          break;
+      }
+    
   }
 
 __QUIT:
