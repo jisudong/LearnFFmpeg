@@ -74,8 +74,6 @@ int main(int argc, const char * argv[]) {
     
 //    printFFmpegInfo();
     
-    
-    return 0;
 }
 
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A7BCB823B0BF5900AEDE48 /* libavdevice.58.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B6DE422331E24B00D048F0 /* libavdevice.58.5.100.dylib */; };
+		18A7BCBE23B1AB9300AEDE48 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22708DC32330E4AE00344272 /* SDL2.framework */; };
 		22707EF6232F3FDF00344272 /* simplest_mediadata_flv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EEC232F3FDF00344272 /* simplest_mediadata_flv.cpp */; };
 		22707EF7232F3FDF00344272 /* simplest_mediadata_udp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EED232F3FDF00344272 /* simplest_mediadata_udp.cpp */; };
 		22707EF8232F3FDF00344272 /* simplest_mediadata_aac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EF1232F3FDF00344272 /* simplest_mediadata_aac.cpp */; };
@@ -18,8 +20,6 @@
 		22708DBC2330DDBE00344272 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22708DBB2330DDBE00344272 /* AudioToolbox.framework */; };
 		22708DBE2330DDCE00344272 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22708DBD2330DDCE00344272 /* CoreMedia.framework */; };
 		22708DC02330DDDD00344272 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22708DBF2330DDDD00344272 /* VideoToolbox.framework */; };
-		22708DC42330E4AE00344272 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22708DC32330E4AE00344272 /* SDL2.framework */; };
-		22B6DE4B2331E24B00D048F0 /* libavdevice.58.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B6DE422331E24B00D048F0 /* libavdevice.58.5.100.dylib */; };
 		22B6DE4C2331E24B00D048F0 /* libavutil.56.22.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B6DE432331E24B00D048F0 /* libavutil.56.22.100.dylib */; };
 		22B6DE4D2331E24B00D048F0 /* libswresample.3.3.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B6DE442331E24B00D048F0 /* libswresample.3.3.100.dylib */; };
 		22B6DE4E2331E24B00D048F0 /* libavfilter.7.40.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B6DE452331E24B00D048F0 /* libavfilter.7.40.101.dylib */; };
@@ -50,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		18A7BCB923B1A99700AEDE48 /* SDL2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = SDL2; path = ffmpeg/lib/SDL2.framework/Versions/A/SDL2; sourceTree = "<group>"; };
+		18A7BCBC23B1AB2F00AEDE48 /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2.a; path = ../../../../../usr/local/Cellar/sdl2/2.0.10/lib/libSDL2.a; sourceTree = "<group>"; };
 		22707EEC232F3FDF00344272 /* simplest_mediadata_flv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_flv.cpp; sourceTree = "<group>"; };
 		22707EED232F3FDF00344272 /* simplest_mediadata_udp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_udp.cpp; sourceTree = "<group>"; };
 		22707EEE232F3FDF00344272 /* simplest_mediadata_raw.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_raw.hpp; sourceTree = "<group>"; };
@@ -102,7 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22B6DE4B2331E24B00D048F0 /* libavdevice.58.5.100.dylib in Frameworks */,
+				18A7BCBE23B1AB9300AEDE48 /* SDL2.framework in Frameworks */,
+				18A7BCB823B0BF5900AEDE48 /* libavdevice.58.5.100.dylib in Frameworks */,
 				22B6DE4C2331E24B00D048F0 /* libavutil.56.22.100.dylib in Frameworks */,
 				22B6DE4D2331E24B00D048F0 /* libswresample.3.3.100.dylib in Frameworks */,
 				22B6DE4E2331E24B00D048F0 /* libavfilter.7.40.101.dylib in Frameworks */,
@@ -114,7 +117,6 @@
 				22708DC02330DDDD00344272 /* VideoToolbox.framework in Frameworks */,
 				22708DBE2330DDCE00344272 /* CoreMedia.framework in Frameworks */,
 				22708DBC2330DDBE00344272 /* AudioToolbox.framework in Frameworks */,
-				22708DC42330E4AE00344272 /* SDL2.framework in Frameworks */,
 				22708DBA2330DDAB00344272 /* libz.tbd in Frameworks */,
 				22708DB82330DD9A00344272 /* libbz2.tbd in Frameworks */,
 				22708DB62330DD8500344272 /* libiconv.tbd in Frameworks */,
@@ -178,6 +180,8 @@
 		22708DA8232F866200344272 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18A7BCBC23B1AB2F00AEDE48 /* libSDL2.a */,
+				18A7BCB923B1A99700AEDE48 /* SDL2 */,
 				22B6DE482331E24B00D048F0 /* libavcodec.58.35.100.dylib */,
 				22B6DE422331E24B00D048F0 /* libavdevice.58.5.100.dylib */,
 				22B6DE452331E24B00D048F0 /* libavfilter.7.40.101.dylib */,
@@ -444,9 +448,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ffmpeg/include",
 				);
+				INSTALL_PATH = /usr/local/bin;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ffmpeg/lib",
+					"$(PROJECT_DIR)/ffmpeg/lib/SDL2.framework/Versions/A",
+					/usr/local/Cellar/sdl2/2.0.10/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -464,9 +471,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ffmpeg/include",
 				);
+				INSTALL_PATH = /usr/local/bin;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ffmpeg/lib",
+					"$(PROJECT_DIR)/ffmpeg/lib/SDL2.framework/Versions/A",
+					/usr/local/Cellar/sdl2/2.0.10/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
