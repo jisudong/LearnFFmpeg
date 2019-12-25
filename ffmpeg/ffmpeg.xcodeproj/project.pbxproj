@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18A7BCB823B0BF5900AEDE48 /* libavdevice.58.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B6DE422331E24B00D048F0 /* libavdevice.58.5.100.dylib */; };
 		18A7BCC823B1FEEE00AEDE48 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A7BCBC23B1AB2F00AEDE48 /* libSDL2.a */; };
+		18A7BCCC23B21F6700AEDE48 /* simplest_ffmpeg_audio_player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18A7BCCA23B21F6700AEDE48 /* simplest_ffmpeg_audio_player.cpp */; };
 		22707EF6232F3FDF00344272 /* simplest_mediadata_flv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EEC232F3FDF00344272 /* simplest_mediadata_flv.cpp */; };
 		22707EF7232F3FDF00344272 /* simplest_mediadata_udp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EED232F3FDF00344272 /* simplest_mediadata_udp.cpp */; };
 		22707EF8232F3FDF00344272 /* simplest_mediadata_aac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22707EF1232F3FDF00344272 /* simplest_mediadata_aac.cpp */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		18A7BCB923B1A99700AEDE48 /* SDL2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = SDL2; path = ffmpeg/lib/SDL2.framework/Versions/A/SDL2; sourceTree = "<group>"; };
 		18A7BCBC23B1AB2F00AEDE48 /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2.a; path = ../../../../../usr/local/Cellar/sdl2/2.0.10/lib/libSDL2.a; sourceTree = "<group>"; };
+		18A7BCCA23B21F6700AEDE48 /* simplest_ffmpeg_audio_player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_ffmpeg_audio_player.cpp; sourceTree = "<group>"; };
+		18A7BCCB23B21F6700AEDE48 /* simplest_ffmpeg_audio_player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = simplest_ffmpeg_audio_player.hpp; sourceTree = "<group>"; };
 		22707EEC232F3FDF00344272 /* simplest_mediadata_flv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_flv.cpp; sourceTree = "<group>"; };
 		22707EED232F3FDF00344272 /* simplest_mediadata_udp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simplest_mediadata_udp.cpp; sourceTree = "<group>"; };
 		22707EEE232F3FDF00344272 /* simplest_mediadata_raw.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = simplest_mediadata_raw.hpp; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 		22B6DE6B23346F3400D048F0 /* simplest_ffmpeg_audio_player */ = {
 			isa = PBXGroup;
 			children = (
+				18A7BCCA23B21F6700AEDE48 /* simplest_ffmpeg_audio_player.cpp */,
+				18A7BCCB23B21F6700AEDE48 /* simplest_ffmpeg_audio_player.hpp */,
 			);
 			path = simplest_ffmpeg_audio_player;
 			sourceTree = "<group>";
@@ -278,7 +283,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = "秀健身";
+				ORGANIZATIONNAME = apple;
 				TargetAttributes = {
 					22C5AC9D2320FA0A00E7707C = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -318,6 +323,7 @@
 				22B6DE7C2334711F00D048F0 /* simplest_ffmpeg_helloworld.cpp in Sources */,
 				22707EF9232F3FDF00344272 /* simplest_mediadata_h264.cpp in Sources */,
 				22707EFA232F3FDF00344272 /* simplest_mediadata_raw.cpp in Sources */,
+				18A7BCCC23B21F6700AEDE48 /* simplest_ffmpeg_audio_player.cpp in Sources */,
 				22C5ACA22320FA0A00E7707C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
