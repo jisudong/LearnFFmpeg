@@ -18,6 +18,7 @@
 #include "simplest_video_play_sdl2.hpp"
 #include "simplest_ffmpeg_helloworld.hpp"
 #include "simplest_ffmpeg_audio_player.hpp"
+#include "simplest_ffmpeg_picture_encoder.hpp"
 
 
 int main(int argc, const char * argv[]) {
@@ -75,7 +76,9 @@ int main(int argc, const char * argv[]) {
     
 //    printFFmpegInfo();
     
-    audio_player();
+//    audio_player();
+    
+    encoder_picture();
     
 }
 
