@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QDebug>
 #include <QFile>
+#include "audiothread.h"
 
 extern "C" {
     #include <libavformat/avformat.h>
@@ -31,44 +32,19 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_audioButton_clicked()
 {
-    AVInputFormat *fmt = av_find_input_format(FMT_NAME);
-    if (!fmt) {
-        qDebug() << "获取输入格式对象失败" << FMT_NAME;
-        return;
+    if (!_audioThread) {
+        _audioThread = new Audiothread(this);
+        _audioThread->start();
+        connect(_audioThread, &Audiothread::finished, [this]() {
+            _audioThread = nullptr;
+            ui->audioButton->setText("开始录音");
+        });
+
+        ui->audioButton->setText("结束录音");
+    } else {
+        _audioThread->requestInterruption();
+        _audioThread = nullptr;
+        ui->audioButton->setText("开始录音");
     }
-
-    AVFormatContext *ctx = nullptr;
-
-    int ret = avformat_open_input(&ctx, DEVICE_NAME,fmt, nullptr);
-    if (ret < 0) {
-        char errbuf[1024];
-        av_strerror(ret, errbuf,sizeof (errbuf));
-        qDebug() << "打开上下文失败" << errbuf;
-        return;
-    }
-
-    QFile file(FILE_NAME);
-
-    if (!file.open(QFile::WriteOnly)) {
-        qDebug() << "打开文件失败" << FILE_NAME;
-
-        avformat_close_input(&ctx);
-        return;
-    }
-
-    int count = 50;
-
-    AVPacket pkt;
-
-    while (count-- > 0 && av_read_frame(ctx, &pkt) == 0) {
-        file.write((const char *)pkt.data, pkt.size);
-    }
-
-    file.close();
-
-    avformat_close_input(&ctx);
-
-
-
 }
 

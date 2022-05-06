@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+#include "audiothread.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -20,5 +22,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    Audiothread *_audioThread = nullptr;
 };
 #endif // MAINWINDOW_H
