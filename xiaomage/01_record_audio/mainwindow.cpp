@@ -4,18 +4,7 @@
 #include <QFile>
 #include "audiothread.h"
 
-extern "C" {
-    #include <libavformat/avformat.h>
-    #include <libavutil/avutil.h>
-}
 
-#ifdef Q_OS_MAC
-    #define FMT_NAME "avfoundation"
-    #define DEVICE_NAME ":1"
-    #define FILE_NAME "/Users/jisudong/Documents/out.pcm"
-#else
-
-#endif
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
