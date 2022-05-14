@@ -86,6 +86,9 @@ void FFmpegUtil::resample(AudioResampleSpec &in, AudioResampleSpec &out) {
             goto end;
         }
 
+//        int size = av_samples_get_buffer_size(nullptr, outChannels, ret, out.sampleFormat, 1);
+//        outFile.write((char *) outData[0], size);
+
         outFile.write((char *) outData[0], ret * outBytesPerSample);
     }
 
