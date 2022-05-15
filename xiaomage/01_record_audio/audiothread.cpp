@@ -82,10 +82,9 @@ void Audiothread::run() {
             char errbuf[1024];
             av_strerror(ret, errbuf, sizeof(errbuf));
             qDebug() << "录音错误：" << errbuf;
-
-            av_packet_unref(pkt);
             break;
         }
+         av_packet_unref(pkt);
     }
 
     av_packet_free(&pkt);
