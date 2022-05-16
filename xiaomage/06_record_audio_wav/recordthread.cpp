@@ -91,6 +91,10 @@ void RecordThread::run() {
         if (ret == 0) {
             file.write((char *) pkt->data, pkt->size);
             header.dataChunkSize += pkt->size;
+
+            unsigned long long ms = 1000 * header.dataChunkSize / header.byteRate;
+            emit timeChanged(ms);
+
         } else if (ret == AVERROR(EAGAIN)) {
             continue;
         } else {

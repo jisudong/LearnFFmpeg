@@ -14,7 +14,7 @@ public:
     explicit RecordThread(QObject *parent = nullptr);
     ~RecordThread();
 signals:
-
+    void timeChanged(unsigned long long ms);
 };
 
 #endif // RECORDTHREAD_H
