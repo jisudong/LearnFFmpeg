@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QDebug>
+#include <QFile>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -15,7 +15,7 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_playButton_clicked()
+void MainWindow::on_showButton_clicked()
 {
     _playThread = new PlayThread(this);
     _playThread->start();

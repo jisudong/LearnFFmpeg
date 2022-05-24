@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <SDL2/SDL.h>
 #include "playthread.h"
 
 QT_BEGIN_NAMESPACE
@@ -18,11 +17,10 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_playButton_clicked();
+    void on_showButton_clicked();
 
 private:
     Ui::MainWindow *ui;
     PlayThread *_playThread = nullptr;
-
 };
 #endif // MAINWINDOW_H
