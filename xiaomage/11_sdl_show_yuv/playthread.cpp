@@ -4,7 +4,7 @@
 #include <QFile>
 #include <SDL2/SDL.h>
 
-#define FILENAME "/Users/jisudong/Documents/lena_256x256_yuv420p.yuv"
+#define FILENAME "/Users/jisudong/Documents/in.yuv"
 #define IMG_W 256
 #define IMG_H 256
 
